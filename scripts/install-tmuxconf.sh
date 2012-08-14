@@ -1,1 +1,2 @@
-ln -s ~/my_env/_tmux_conf ~/.tmux_conf
+echo "Static Link ~/my_env/_tmux.conf to ~/.tmux.conf"
+ln -s ~/my_env/_tmux.conf ~/.tmux.conf
