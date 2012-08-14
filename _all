@@ -1,0 +1,7 @@
+source ~/my_env/_bash_profile_langutf8
+source ~/my_env/_bash_profile_prompt
+source ~/my_env/_bash_profile_git
+source ~/my_env/_bash_profile_rails
+source ~/my_env/_bash_profile_tmux
+source ~/my_env/_bash_profile_others
+
