@@ -1,0 +1,17 @@
+[user]
+    email = myun2@nwhite.info
+    name = myun2
+[core]
+    pager = lv -c
+    editor = vim -n -c 'syntax on'
+
+[alias]
+    wtf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    cp = cherry-pick
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
