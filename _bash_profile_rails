@@ -1,0 +1,10 @@
+
+# Rails
+alias gmig="rails generate migration"
+alias mig="rake db:migrate"
+alias migrate="rake db:migrate"
+alias rollback="rake db:rollback"
+alias bi="bundle install"
+alias vil="vi `ls | awk 'END {print}'`"
+
+alias serv="rake dev:server &"
