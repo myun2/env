@@ -1,0 +1,24 @@
+
+# tmux Aliases
+alias det="tmux detach-client"
+alias at="tmux attach -t"
+alias t="at"
+
+alias tl="tmux ls"
+alias tls="tl"
+alias tlist="tl"
+
+alias tt="tmux"
+alias ns="tmux"
+alias nt="tmux"
+alias nw="tmux new-window"
+alias close="exit"
+alias n="tmux next-window"
+alias b="tmux previous-window"
+alias rns="tmux rename-session"
+alias rnt="tmux rename-session"
+alias rnw="tmux rename-window"
+alias chw="rnw"
+
+alias mouseon="tmux set-option mode-mouse on; tmux set-option mouse-select-window on"
+alias mouseoff="tmux set-option mode-mouse off; tmux set-option mouse-select-window off"
