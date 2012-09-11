@@ -17,8 +17,6 @@ PS1_="\[\033[0;32m\][\u@\h \W]$ "
 PS1=$PS1_
 alias ps_clear="PS1=\"$\\[\033[0m\] \""
 
-#git config --global core.pager "lv -Ou8"
-
 # Git Aliases
 #alias push="git push"
 #alias pull="git pull"
@@ -103,6 +101,8 @@ alias devpull="switch develop; git fetch upstream; git pull"
 alias lpull="git pull"
 alias upstream="switch develop; git fetch upstream; git pull; rake db:migrate"
 alias gitsq="git rebase -i develop"
+
+alias brrm="git branch -m"
 
 #alias push="echo `curbr`; git push origin `curbr`"
 function push_ {

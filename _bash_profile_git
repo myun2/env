@@ -84,6 +84,8 @@ alias lpull="git pull"
 alias upstream="switch develop; git fetch upstream; git pull; rake db:migrate"
 alias gitsq="git rebase -i develop"
 
+alias brrm="git branch -m"
+
 #alias push="echo `curbr`; git push origin `curbr`"
 function push_ {
   curbr_=`curbr`
