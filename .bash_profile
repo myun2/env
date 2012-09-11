@@ -32,6 +32,8 @@ function revert {
   git checkout $*
   git reset $*
 }
+
+alias fetch="git fetch"
 alias co="git commit"
 alias m="git commit"
 alias comi="git commit"
