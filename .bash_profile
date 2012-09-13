@@ -32,8 +32,6 @@ function revert {
   git checkout $*
   git reset $*
 }
-
-alias fetch="git fetch"
 alias co="git commit"
 alias m="git commit"
 alias comi="git commit"
@@ -45,6 +43,14 @@ alias branch="br"
 alias brl="br"
 #alias delbr="br -d"
 alias delbr="br -D"
+function delthis {
+  brname=`curbr`
+  echo "Delete Branch $brname!"
+  #echo "You Want DELETE Branch $brname reary? (y/n)"
+  #read yn
+  swdev
+  delbr $brname
+}
 alias delbrr="git push origin"
 alias switch="git checkout"
 #alias rmco="git checkout -b"
@@ -74,7 +80,22 @@ function brsw {
   br $*
 	sw $*
 }
+function reco
+{
+  brname=`curbr`
+  delthis
+  rmco $brname
+}
+function extag
+{
+  git tag $* $*
+  delbr $*
+}
+alias totag="extag"
+alias tag="git tag"
+alias tags="git tag | more"
 
+alias fetch="git fetch"
 alias swdev="sw develop; br"
 alias swd="swdev"
 alias swdev="sw develop"
@@ -105,6 +126,13 @@ alias upstream="switch develop; git fetch upstream; git pull; rake db:migrate"
 alias gitsq="git rebase -i develop"
 
 alias brrm="git branch -m"
+alias rmbr_="git branch -m"
+function rmbr {
+  echo "rename to $*"
+  rmbr_ $*
+  br
+}
+alias rnbr="rmbr"
 
 #alias push="echo `curbr`; git push origin `curbr`"
 function push_ {
@@ -115,9 +143,19 @@ function push_ {
 alias push="git push"
 
 function rmco_ {
+  fetch
   git checkout -b $1 origin/$1
+  br
 }
 alias rmco="rmco_"
+
+function dbr {
+	br_name="dirty/$1_$2"
+	br $br_name
+	echo "Created $br_name"
+	switch $br_name
+	br
+}
 
 function fbr {
 	br_name="feature/$1_$2"
