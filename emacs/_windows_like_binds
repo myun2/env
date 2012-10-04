@@ -1,5 +1,6 @@
 ;; Windows Like Key Binds...
 (global-set-key "\M-:" 'execute-extended-command)
+(global-set-key "\M-z" 'save-buffers-kill-terminal) ;; ESC Z is Quit
 
 (global-set-key "\C-l" 'eval-current-buffer)
 ;;(global-set-key "\C-x l" 'eval-current-buffer)
