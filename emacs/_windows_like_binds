@@ -1,9 +1,18 @@
-(global-set-key "\C-s" 'save-buffer)
-(global-set-key "\C-c" 'copy-region-as-kill)
-(global-set-key "\C-v" 'yank)
+;; Windows Like Key Binds...
 
-(global-set-key "\C-z" 'undo)
-(global-set-key "\C-r" 'redo)
+(global-set-key "\C-l" 'eval-current-buffer)
+
+(global-set-key "\C-o" 'find-file)             ;; Ctrl+O is File Open
+(global-set-key "\C-k" 'kill-buffer)           ;; Ctrl+K is Kill Buffer
+(global-set-key "\C-s" 'save-buffer)           ;; Ctrl+S is Save File
+
+(global-set-key "\C-a" 'mark-whole-buffer)     ;; Ctrl+A is Select All
+(global-set-key "\C-x" 'kill-region)           ;; Ctrl+X is Cut
+(global-set-key "\C-c" 'copy-region-as-kill)   ;; Ctrl+C is Copy
+(global-set-key "\C-v" 'yank)                  ;; Ctrl+V is Paste
+
+(global-set-key "\C-z" 'undo)                  ;; Ctrl+Z is Undo
+(global-set-key "\C-r" 'redo)                  ;; Ctrl+R or Y is Redo
 (global-set-key "\C-y" 'redo)
 (global-set-key "\C-/" 'beginning-of-buffer)
-(global-set-key "\C-G" 'end-of-buffer)
+(global-set-key "\C-w" 'end-of-buffer)
