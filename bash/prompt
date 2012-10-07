@@ -50,5 +50,21 @@ ps_color $CL_CYAN
 
 function color_test
 {
-	echo -e "${CL_BLACK}Black"
+	echo -e "${CL_BLACK}CL_BLACK"
+	echo -e "${CL_RED}CL_RED"
+	echo -e "${CL_GREEN}CL_GREEN"
+	echo -e "${CL_DYELLOW}CL_DYELLOW"
+	echo -e "${CL_BLUE}CL_BLUE"
+	echo -e "${CL_PURPLE}CL_PURPLE"
+	echo -e "${CL_DCYAN}CL_DCYAN"
+	echo -e "${CL_LGRAY}CL_LGRAY"
+
+	echo -e "${CL_DGRAY}CL_DGRAY"
+	echo -e "${CL_LRED}CL_LRED"
+	echo -e "${CL_LGREEN}CL_LGREEN"
+	echo -e "${CL_YELLOW}CL_YELLOW"
+	echo -e "${CL_LBLUE}CL_LBLUE"
+	echo -e "${CL_PINK}CL_PINK"
+	echo -e "${CL_CYAN}CL_CYAN"
+	echo -e "${CL_WHITE}CL_WHITE"
 }
