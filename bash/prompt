@@ -17,6 +17,15 @@ CL_PINK="\033[1;35m"
 CL_CYAN="\033[1;36m"
 CL_WHITE="\033[1;37m"
 
+function CL_256
+{
+	echo -e "\033[0;38;5;$1m"
+}
+function BG_256
+{
+	echo -e "\033[0;48;5;$1m"
+}
+
 PS_RESET="\[\033[0m\]"
 
 # Prompt Escapes
