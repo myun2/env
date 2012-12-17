@@ -1,3 +1,12 @@
 alias eb="vi ~/.bash_profile"
 alias sou="source ~/.bash_profile"
 alias hist="history 50"
+
+alias _diff="/usr/bin/diff"
+alias ddiff="/usr/bin/diff"
+
+alias xt="TERM=xterm"
+alias xt256="TERM=xterm-256color"
+alias xterm256="TERM=xterm-256color"
+xt256
+

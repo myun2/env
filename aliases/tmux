@@ -22,3 +22,11 @@ alias chw="rnw"
 
 alias mouseon="tmux set-option mode-mouse on; tmux set-option mouse-select-window on"
 alias mouseoff="tmux set-option mode-mouse off; tmux set-option mouse-select-window off"
+
+alias tcl="tmux set status-bg"
+alias lcl="tmux set status-left-bg"
+alias lcc="tmux set status-left-bg colour\$((RANDOM%256))"
+alias bcc="tmux set status-bg colour\$((RANDOM%256))"
+alias acc="tmux set -g window-status-current-bg colour\$((RANDOM%256))"
+alias acc2="tmux set window-status-current-bg colour\$((RANDOM%256))"
+alias rcc="lcc; bcc"
