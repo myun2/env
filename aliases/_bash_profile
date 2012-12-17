@@ -1,11 +1,15 @@
-#!/bin/sh
-target_rc=~/.bash_profile
-env_dir=~/my_env
-aliases_dir=$env_dir/aliases
+# Append Aliases by https://github.com/myun2/my_env"
+myun2_myenv_dir=~/my_env
+myun2_myenv_aliases_dir=$myun2_myenv_dir/aliases
 
-echo
-echo "# Append Aliases by https://github.com/myun2/my_env"
-echo "source $aliases_dir/others" >> $target_rc
-echo "source $aliases_dir/git" >> $target_rc
-echo "source $aliases_dir/tmux" >> $target_rc
-echo "source $aliases_dir/rails" >> $target_rc
+# Aliases
+source $myun2_myenv_aliases_dir/prompt
+source $myun2_myenv_aliases_dir/others
+source $myun2_myenv_aliases_dir/git
+source $myun2_myenv_aliases_dir/tmux
+source $myun2_myenv_aliases_dir/rails
+
+# Prompt
+PS_BODY="$_PROMPT_USER@$_PROMPT_HOST $_PROMPT_CURDIR"
+PS_COLOR=$CL_DCYAN
+PS1="$PS_COLOR[$PS_BODY]$_PROMPT_MARK$PS_RESET "

@@ -41,22 +41,10 @@ _PROMPT_CURDIR="\W"
 _PROMPT_PATH="\w"
 _PROMPT_MARK="\$"
 
-# Backup PS1
-_DEFPS1=$PS1
-
-# Prompt Body
-PS_BODY="$_PROMPT_USER@$_PROMPT_HOST $_PROMPT_CURDIR"
-
-function ps_color {
-	PS_COLOR=$*
-	PS1="$PS_COLOR[$PS_BODY]$_PROMPT_MARK$PS_RESET "
-	#PS1="$PS_COLOR[$PS_BODY]$_PROMPT_MARK "
-}
-ps_color $CL_CYAN
-
 # Clear PS
 #alias ps_clear="PS1=\"$\\[\033[0m\] \""
 
+# Color Test Util!!
 function color_test
 {
 	echo -e "${CL_BLACK}CL_BLACK"
