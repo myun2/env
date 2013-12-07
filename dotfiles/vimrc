@@ -23,3 +23,5 @@ set tabstop=2
 set expandtab
 set ambiwidth=double
 set shiftwidth=2
+
+autocmd FileType make,c,cpp setlocal noexpandtab tabstop=4
