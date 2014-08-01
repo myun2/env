@@ -4,6 +4,7 @@
 [core]
     pager = lv -c
     editor = vim -n -c 'syntax on'
+	excludesfile = /home/myun2/.gitignore_global
 
 [alias]
     wtf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
