@@ -70,14 +70,20 @@ function reco
   delthis
   rmco $brname
 }
-function extag
+function totag
 {
   git tag $* $*
   delbr $*
 }
-alias totag="extag"
+function untag
+{
+  sw $1
+  brsw $1
+  deltag $1
+}
 alias tag="git tag"
 alias tags="git tag | more"
+alias deltag="git tag -d"
 
 alias fetch="git fetch"
 alias swdev="sw develop; br"
@@ -133,6 +139,12 @@ function rmco_ {
 }
 alias rmco="rmco_"
 
+function rmups {
+  fetch
+  git checkout -b $1 upstream/$1
+  br
+}
+
 function dbr {
 	br_name="dirty/$1_$2"
 	br $br_name
@@ -149,6 +161,14 @@ function fbr {
 	br
 }
 alias brf="fbr"
+
+function hbr {
+	br_name="hotfix/$1_$2"
+	br $br_name
+	echo "Created $br_name"
+	switch $br_name
+	br
+}
 
 function sbr {
 	br_name="spike/$1_$2"
