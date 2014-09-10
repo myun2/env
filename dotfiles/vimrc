@@ -12,7 +12,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Ruby, Rails, Rspec
-Plugin 'thoughtbot/vim-rspec'
+"Plugin 'thoughtbot/vim-rspec'
+Plugin 'Keithbsmiley/rspec.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -27,6 +28,9 @@ set number
 set syntax=htmldjango
 
 autocmd BufNewFile,BufRead *.less set filetype=css
+
+" rspec.vim (Keithbsmiley)
+autocmd BufReadPost,BufNewFile *_foo.rb set syntax=rspec
 
 set mouse=a
 set autoindent
