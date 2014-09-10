@@ -1,19 +1,30 @@
 " Vim RC
 
+" == Start Vundle ================================================================
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Ruby, Rails, Rspec
+Plugin 'thoughtbot/vim-rspec'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" == End Vundle ==================================================================
+
 set encoding=utf-8
 set number
-syntax on
 
 " twig
 set syntax=htmldjango
-
-autocmd BufRead,BufNewFile *.erb set filetype=eruby.html
-autocmd BufRead,BufNewFile Gemfile set filetype=ruby
-" autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
-autocmd BufRead,BufNewFile *.coffee set filetype=coffee
-filetype off
-" call pathogen#runtime_append_all_bundles()
-filetype on
 
 autocmd BufNewFile,BufRead *.less set filetype=css
 
@@ -24,23 +35,5 @@ set expandtab
 set ambiwidth=double
 set shiftwidth=2
 
-autocmd FileType make,c,cpp setlocal noexpandtab tabstop=4
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
-autocmd FileType cucumber compiler cucumber | setl makeprg=cucumber\ \"%:p\"
-autocmd FileType ruby
-      \ if expand('%') =~# '_test\.rb$' |
-      \   compiler rubyunit | setl makeprg=testrb\ \"%:p\" |
-      \ elseif expand('%') =~# '_spec\.rb$' |
-      \   compiler rspec | setl makeprg=rspec\ \"%:p\" |
-      \ else |
-      \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
-      \ endif
-autocmd User Bundler
-      \ if &makeprg !~# 'bundle' | setl makeprg^=bundle\ exec\  | endif
-
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
