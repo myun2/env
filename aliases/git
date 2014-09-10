@@ -47,6 +47,7 @@ alias cpick="git cherry-pick"
 alias status="git status"
 alias stat="git status"
 alias stash="git stash"
+alias pop="git stash pop"
 #alias sw="git checkout"
 
 function curbr {
