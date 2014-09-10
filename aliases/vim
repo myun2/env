@@ -1,0 +1,1 @@
+alias vundleinstall="vim +PluginInstall +qall"
