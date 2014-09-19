@@ -144,7 +144,7 @@ function rmco_ {
 }
 alias rmco="rmco_"
 
-function rmups {
+function upco {
   fetch
   git checkout -b $1 upstream/$1
   br
