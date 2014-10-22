@@ -135,11 +135,11 @@ alias rnbr="rmbr"
 
 #alias push="echo `curbr`; git push origin `curbr`"
 function push_ {
-  curbr_=`curbr`
-  echo $curbr_
-  git push origin `curbr`
+  branch=`curbr`
+  echo "Push \`$branch\` to origin/$branch"
+  git push origin $branch
 }
-alias push="git push"
+alias push="push_"
 
 function rmco_ {
   fetch
