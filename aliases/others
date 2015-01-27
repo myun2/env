@@ -13,7 +13,7 @@ alias xterm256="TERM=xterm-256color"
 TERM=screen-256color
 
 function findgrep {
-  find ./ -type f -print | xargs grep $1 /dev/null
+  find ./ -type f -print | xargs grep -n $1 /dev/null
 }
 alias figrep="findgrep"
 alias fgrep="findgrep"
