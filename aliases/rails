@@ -1,4 +1,5 @@
 alias gmig="rails generate migration"
+alias gmodel="rails generate model"
 alias mig="rake db:migrate"
 alias migrate="rake db:migrate"
 alias rollback="rake db:rollback"
