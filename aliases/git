@@ -46,8 +46,12 @@ alias gcp="git cherry-pick"
 alias cpick="git cherry-pick"
 alias status="git status"
 alias stat="git status"
+alias s="git show"
+alias show="git show"
 alias stash="git stash"
 alias pop="git stash pop"
+alias reflog="git reflog"
+alias gcp="git cherry-pick"
 #alias sw="git checkout"
 
 function curbr {
@@ -78,7 +82,7 @@ function totag
 function untag
 {
   sw $1
-  brsw $1
+  br $1
   deltag $1
 }
 alias tag="git tag"
@@ -131,11 +135,11 @@ alias rnbr="rmbr"
 
 #alias push="echo `curbr`; git push origin `curbr`"
 function push_ {
-  curbr_=`curbr`
-  echo $curbr_
-  git push origin `curbr`
+  branch=`curbr`
+  echo "Push \`$branch\` to origin/$branch"
+  git push origin $branch
 }
-alias push="git push"
+alias push="push_"
 
 function rmco_ {
   fetch
@@ -144,7 +148,7 @@ function rmco_ {
 }
 alias rmco="rmco_"
 
-function rmups {
+function upco {
   fetch
   git checkout -b $1 upstream/$1
   br
