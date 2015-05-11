@@ -30,7 +30,7 @@ function delthis {
   echo "Delete Branch $brname!"
   #echo "You Want DELETE Branch $brname reary? (y/n)"
   #read yn
-  swdev
+  git checkout develop
   delbr $brname
 }
 alias delbrr="git push origin"
