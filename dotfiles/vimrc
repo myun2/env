@@ -41,6 +41,8 @@ set shiftwidth=2
 set backspace=indent,eol,start
 
 autocmd FileType make,c,cpp,h,hpp,hxx setlocal noexpandtab tabstop=4
+autocmd FileType make,c,cpp setlocal noexpandtab tabstop=3
+au BufNewFile,BufRead *.c,*.cpp,*.hpp,*.hxx set noexpandtab tabstop=3 shiftwidth=3
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
