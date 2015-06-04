@@ -71,6 +71,7 @@ Plugin 'user/L9', {'name': 'newL9'}
 
 Bundle 'Keithbsmiley/rspec.vim'
 Bundle 'thoughtbot/vim-rspec'
+Plugin 'derekwyatt/vim-scala'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -89,8 +90,9 @@ autocmd User Bundler
       \ if &makeprg !~# 'bundle' | setl makeprg^=bundle\ exec\  | endif
 
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
+autocmd BufReadPost,BufNewFile *.scala set syntax=scala
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
