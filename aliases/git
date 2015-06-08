@@ -139,7 +139,7 @@ alias rnbr="rmbr"
 function push_ {
   branch=`curbr`
   echo "Push \`$branch\` to origin/$branch"
-  git push origin $branch
+  git push origin $branch $*
 }
 alias push="push_"
 

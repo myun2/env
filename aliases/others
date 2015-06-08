@@ -15,5 +15,8 @@ TERM=screen-256color
 function findgrep {
   find ./ -type f -print | xargs grep -n $1 /dev/null
 }
+function findgrep2 {
+  find ./ -type f -name $1 -print | xargs grep -n $2 /dev/null
+}
 alias figrep="findgrep"
 alias fgrep="findgrep"
