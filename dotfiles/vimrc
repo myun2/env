@@ -74,6 +74,7 @@ Bundle 'Keithbsmiley/rspec.vim'
 Bundle 'thoughtbot/vim-rspec'
 Plugin 'slim-template/vim-slim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'kchmck/vim-coffee-script'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,6 +94,13 @@ autocmd User Bundler
 
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufReadPost,BufNewFile *.scala set syntax=scala
+
+" Coffee
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+autocmd BufWritePost *.coffee silent make! 
+autocmd QuickFixCmdPost * nested cwindow | redraw! 
+nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
 
 " execute pathogen#infect()
 
