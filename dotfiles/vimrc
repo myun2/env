@@ -41,6 +41,7 @@ set ambiwidth=double
 set shiftwidth=2
 set backspace=indent,eol,start
 
+autocmd FileType make,c,cpp,h,hpp,hxx setlocal noexpandtab tabstop=4
 autocmd FileType make,c,cpp setlocal noexpandtab tabstop=3
 au BufNewFile,BufRead *.c,*.cpp,*.hpp,*.hxx set noexpandtab tabstop=3 shiftwidth=3
 
@@ -72,6 +73,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Keithbsmiley/rspec.vim'
 Bundle 'thoughtbot/vim-rspec'
 Plugin 'slim-template/vim-slim'
+Plugin 'derekwyatt/vim-scala'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -90,8 +92,9 @@ autocmd User Bundler
       \ if &makeprg !~# 'bundle' | setl makeprg^=bundle\ exec\  | endif
 
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
+autocmd BufReadPost,BufNewFile *.scala set syntax=scala
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 syntax on
 filetype plugin indent on

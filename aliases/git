@@ -84,8 +84,8 @@ function totag
 function untag
 {
   sw $1
-  br $1
-  deltag $1
+  brsw $1
+  git tag -d $1
 }
 alias tag="git tag"
 alias tags="git tag | more"
