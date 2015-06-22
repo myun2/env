@@ -94,6 +94,7 @@ autocmd User Bundler
 
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufReadPost,BufNewFile *.scala set syntax=scala
+autocmd BufReadPost,BufNewFile *.slim set syntax=slim
 
 " Coffee
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
