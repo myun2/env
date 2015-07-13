@@ -186,6 +186,14 @@ function hbr {
 	br
 }
 
+function ver {
+  if [ -z "$1" ]; then
+    sw $ver
+  else
+    br `curbr`_$*
+  fi
+}
+
 function sbr {
 	br_name="spike/$1_$2"
 	br $br_name
