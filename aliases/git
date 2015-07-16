@@ -1,7 +1,4 @@
-
 # Git Aliases
-#alias push="git push"
-#alias pull="git pull"
 function update_br_ps1 {
 	cur_br=$(git branch -a 2>/dev/null | grep "^*" | tr -d '\* ')
 	#PS1="\[\033[0;32m\][\[\033[0;31m\]$cur_br \[\033[0;32m\]\W]$ "
