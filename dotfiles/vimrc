@@ -77,3 +77,5 @@ nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
 
 syntax on
 filetype plugin indent on
+
+autocmd BufWritePre * :%s/\s\+$//ge
