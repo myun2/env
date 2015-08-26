@@ -9,5 +9,11 @@ function push-ups {
 function push-ups-f {
   git push upstream `curbr` -f
 }
+
+# Typo aliases
 alias push-usp="push-ups"
 alias push-usp-f="push-ups-f"
+alias puhs-ups="push-ups"
+alias puhs-ups-f="push-ups-f"
+alias puhs-usp="push-ups"
+alias puhs-usp-f="push-ups-f"
