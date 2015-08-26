@@ -1,8 +1,11 @@
+function push {
+  branch=`curbr`
+  echo "Push \`$branch\` to origin/$branch"
+  git push origin $branch $*
+}
 function push-f {
   git push origin `curbr` -f
 }
-alias puhs-f="push-f"
-
 function push-ups {
   git push upstream `curbr`
 }
@@ -11,6 +14,7 @@ function push-ups-f {
 }
 
 # Typo aliases
+alias puhs-f="push-f"
 alias push-usp="push-ups"
 alias push-usp-f="push-ups-f"
 alias puhs-ups="push-ups"

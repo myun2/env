@@ -6,7 +6,7 @@ myun2_myenv_aliases_dir=$myun2_myenv_dir/aliases
 source $myun2_myenv_aliases_dir/prompt
 source $myun2_myenv_aliases_dir/others
 source $myun2_myenv_aliases_dir/git
-source $myun2_myenv_aliases_dir/git2
+source $myun2_myenv_aliases_dir/git-push
 source $myun2_myenv_aliases_dir/tmux
 source $myun2_myenv_aliases_dir/rails
 source $myun2_myenv_aliases_dir/vim

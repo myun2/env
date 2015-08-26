@@ -137,14 +137,6 @@ function rmbr {
 }
 alias rnbr="rmbr"
 
-#alias push="echo `curbr`; git push origin `curbr`"
-function push_ {
-  branch=`curbr`
-  echo "Push \`$branch\` to origin/$branch"
-  git push origin $branch $*
-}
-alias push="push_"
-
 function rmco_ {
   fetch
   git checkout -b $1 origin/$1
