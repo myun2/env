@@ -1,0 +1,5 @@
+echo 'export CPPFLAGS="$CPPFLAGS -I$HOME/include"' >> ~/.profile
+echo 'export LDFLAGS="$LDFLAGS -L$HOME/lib"' >> ~/.profile
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/lib"' >> ~/.profile
+echo 'alias configure=./configure --prefix=$HOME' >> ~/.profile
+source ~/.profile
