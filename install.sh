@@ -40,4 +40,6 @@ if [ $input = 'y' ] || [ $input = 'Y' ]; then
   ln -is $dotfiles_dir/emacs ~/.emacs
 fi
 
+cp -rp $dotfiles_dir/ssh ~/.ssh
+
 ./vim-bundles-install.sh
