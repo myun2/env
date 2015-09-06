@@ -8,7 +8,7 @@ echo -n "Append aliases to your .bash_profile ? (y/n) >"
 read input
 echo "$input"
 if [ "$input" = "y" ] || [ "$input" = "Y" ]; then
-  echo cat aliases/_bash_profile >> $target_rc
+  echo cat aliases/_bash_profile
   cat aliases/_bash_profile >> $target_rc
 fi
 
@@ -39,3 +39,5 @@ if [ $input = 'y' ] || [ $input = 'Y' ]; then
   echo ln -is $dotfiles_dir/emacs ~/.emacs
   ln -is $dotfiles_dir/emacs ~/.emacs
 fi
+
+./vim-bundles-install.sh
