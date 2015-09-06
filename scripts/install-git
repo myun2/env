@@ -1,0 +1,12 @@
+sudo yum -y install perl-ExtUtils-MakeMaker
+sudo yum -y install curl-devel expat-devel gettext-devel   openssl-devel zlib-devel
+
+cd
+wget https://git-core.googlecode.com/files/git-1.9.0.tar.gz
+tar -zxvf git-1.9.0.tar.gz
+cd git-1.9.0
+./configure --prefix=$HOME --with-curl --with-expat
+make install
+cd
+rm -rf git-1.9.0
+rm     git-1.9.0.tar.gz
