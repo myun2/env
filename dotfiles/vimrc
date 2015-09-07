@@ -43,6 +43,9 @@ set ambiwidth=double
 set shiftwidth=2
 set backspace=indent,eol,start
 
+" Auto remove line last whitespaces
+autocmd BufWritePre * :%s/\s\+$//ge
+
 autocmd FileType make,c,cpp,h,hpp,hxx setlocal noexpandtab tabstop=4
 autocmd FileType make,c,cpp setlocal noexpandtab tabstop=3
 au BufNewFile,BufRead *.c,*.cpp,*.hpp,*.hxx set noexpandtab tabstop=3 shiftwidth=3
