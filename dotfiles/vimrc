@@ -79,6 +79,5 @@ syntax on
 filetype plugin indent on
 
 autocmd BufWritePre * :%s/\s\+$//ge
-imap 443 <esc>
 nmap j <up>
 nmap k <down>
