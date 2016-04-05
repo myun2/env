@@ -42,4 +42,9 @@ fi
 
 cp -rp $dotfiles_dir/ssh ~/.ssh
 
+scripts/install-git
+scripts/install-tmux
+scripts/install-vim
+scripts/install-rvm
+scripts/install-vim-ruby.sh
 ./vim-bundles-install.sh
