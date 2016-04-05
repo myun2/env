@@ -1,3 +1,17 @@
-wget http://apt.sw.be/redhat/el6/en/x86_64/rpmforge/RPMS/lv-4.51-1.el6.rf.x86_64.rpm
-sudo rpm -ivh lv-4.51-1.el6.rf.x86_64.rpm
-rm lv-4.51-1.el6.rf.x86_64.rpm
+source ./cflags
+mkdir -p ~/src
+cd ~/src
+wget http://www.mt.cs.keio.ac.jp/person/narita/freeware/lv421.tar.gz
+tar -zxvf lv421.tar.gz
+cd lv421
+
+# Fix compile error
+echo '#include <sys/ioctl.h>' >> src/console.h
+
+make
+mkdir -p ~/bin
+cp lv ~/bin/
+
+cd ../
+rm -rf lv421
+rm     lv421.tar.gz
