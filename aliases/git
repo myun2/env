@@ -58,7 +58,10 @@ function curbr {
 	echo $(git branch -a 2>/dev/null | grep "^*" | tr -d '\* ')
 }
 
-alias bu="br; update_br_ps1"
+#alias bu="br; update_br_ps1"
+function bu {
+  branch -u origin/`curbr`
+}
 function sw {
 	switch $*
 	update_br_ps1
