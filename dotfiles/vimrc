@@ -17,6 +17,7 @@ Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'leafgarland/typescript-vim'
 
 " == End Vundle ==================================================================
 
@@ -31,9 +32,7 @@ set number
 set syntax=htmldjango
 
 autocmd BufNewFile,BufRead *.less set filetype=css
-
-" rspec.vim (Keithbsmiley)
-autocmd BufReadPost,BufNewFile *_foo.rb set syntax=rspec
+autocmd BufReadPost,BufNewFile Gemfile,*.jbuilder set syntax=ruby
 
 set mouse=a
 set autoindent
@@ -81,3 +80,5 @@ filetype plugin indent on
 autocmd BufWritePre * :%s/\s\+$//ge
 nmap j <up>
 nmap k <down>
+
+set ambiwidth=single
