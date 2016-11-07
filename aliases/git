@@ -86,7 +86,8 @@ function totag
   br_name=$1
   if [ -z $br_name ]; then
     br_name=`curbr`
-    swdev
+    #swdev
+    git checkout develop
   fi
   git tag $br_name $br_name
   delbr $br_name
