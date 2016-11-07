@@ -67,6 +67,7 @@ function bu {
   branch -u origin/`curbr`
 }
 function sw {
+  prev_br=`curbr`
 	switch $*
 	update_br_ps1
 }
@@ -104,6 +105,7 @@ alias deltag="git tag -d"
 
 alias fetch="git fetch"
 alias swdev="sw develop; br"
+alias prev_br='echo $prev_br'
 alias swd="swdev"
 alias swdev="sw develop"
 alias reb="git rebase upstream/develop"
