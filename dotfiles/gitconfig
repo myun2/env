@@ -2,7 +2,8 @@
     email = myun2@nwhite.info
     name = myun2
 [core]
-    pager = lv -c
+    #pager = lv -c -Os
+    pager = less -F -X
     editor = vim -n -c 'syntax on'
     excludesfile = ~/.gitignore
 

@@ -13,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Ruby, Rails, Rspec
 "Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-haml'
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'derekwyatt/vim-scala'
