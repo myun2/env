@@ -46,7 +46,12 @@ alias gcp="git cherry-pick"
 alias cpick="git cherry-pick"
 alias status="git status"
 alias stat="git status"
+
 alias s="git show"
+alias sh="git show HEAD^"
+alias shh="git show HEAD^^"
+alias shhh="git show HEAD^^^"
+alias shhhh="git show HEAD^^^^"
 alias show="git show"
 alias stash="git stash"
 alias pop="git stash pop"
@@ -183,6 +188,7 @@ function ver {
   if [ -z "$1" ]; then
     sw $ver
   else
+    echo Create `curbr`_$*
     br `curbr`_$*
   fi
 }
