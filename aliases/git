@@ -104,7 +104,7 @@ alias tags="git tag | more"
 alias deltag="git tag -d"
 
 alias fetch="git fetch"
-alias swdev="sw develop; br"
+alias swdev="sw develop; br; pull"
 alias prev_br='echo $prev_br'
 alias swd="swdev"
 alias swdev="sw develop"
@@ -170,6 +170,8 @@ function dbr {
 }
 
 function fbr {
+  swdev
+  pull
 	br_name="feature/$1_$2"
 	br $br_name
 	echo "Created $br_name"
@@ -179,6 +181,8 @@ function fbr {
 alias brf="fbr"
 
 function hbr {
+  git checkout master
+  pull
 	br_name="hotfix/$1_$2"
 	br $br_name
 	echo "Created $br_name"
