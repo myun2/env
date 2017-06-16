@@ -1,4 +1,4 @@
-alias eb="vi ~/.bash_profile"
+alias ebe="vi ~/.bash_profile"
 alias sou="source ~/.bash_profile"
 alias hist="history 50"
 

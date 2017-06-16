@@ -170,7 +170,6 @@ function dbr {
 }
 
 function fbr {
-  swdev
   pull
 	br_name="feature/$1_$2"
 	br $br_name
