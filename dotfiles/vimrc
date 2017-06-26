@@ -12,7 +12,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Ruby, Rails, Rspec
-"Plugin 'thoughtbot/vim-rspec'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-haml'
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
@@ -33,7 +33,7 @@ set number
 set syntax=htmldjango
 
 autocmd BufNewFile,BufRead *.less set filetype=css
-autocmd BufReadPost,BufNewFile Gemfile,*.jbuilder set syntax=ruby
+autocmd BufReadPost,BufNewFile Gemfile,*.jbuilder,*.ruby set syntax=ruby
 
 set mouse=a
 set autoindent

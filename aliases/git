@@ -6,6 +6,9 @@ function update_br_ps1 {
 	PS1="\[\033[0;32m\][\[\033[0;31m\]$cur_br \033[0m\]\W]\[\033[0;32m\]$ \033[0m\]"
 }
 alias add="git add"
+alias add.="git add ."
+alias add-p="add -p"
+alias addp="add -p"
 #alias revert="git checkout"
 function revert {
   git checkout $*
@@ -62,10 +65,14 @@ function curbr {
 	echo $(git branch -a 2>/dev/null | grep "^*" | tr -d '\* ')
 }
 
+function bru {
+  branch -u upstream/`curbr`
+}
 #alias bu="br; update_br_ps1"
 function bu {
   branch -u origin/`curbr`
 }
+
 function sw {
   prev_br=`curbr`
 	switch $*
@@ -128,6 +135,7 @@ alias diff^^^="git diff HEAD^^^"
 alias diff^^^^="git diff HEAD^^^^"
 alias diff^^^^^="git diff HEAD^^^^^"
 alias diff_="/usr/bin/diff"
+alias checkout="git checkout"
 alias ours="git checkout --ours"
 alias theirs="git checkout --theirs"
 
