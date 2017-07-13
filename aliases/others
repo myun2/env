@@ -20,4 +20,5 @@ function findgrep2 {
 }
 alias figrep="findgrep"
 alias fgrep="findgrep"
-alias last="ls | tail -n 1"
+alias last="ls  | tail -n 1"
+alias first="ls | head -n 1"
