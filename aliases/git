@@ -51,6 +51,7 @@ alias status="git status"
 alias stat="git status"
 
 alias s="git show"
+alias h="git reset --hard"
 alias shh="git show HEAD^^"
 alias shhh="git show HEAD^^^"
 alias shhhh="git show HEAD^^^^"
