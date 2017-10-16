@@ -4,7 +4,6 @@
 [core]
     #pager = lv -c -Os
     pager = less -F -X
-    editor = vim -n -c 'syntax on'
     excludesfile = ~/.gitignore
 
 [alias]

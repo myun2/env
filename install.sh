@@ -33,13 +33,6 @@ if [ $input = 'y' ] || [ $input = 'Y' ]; then
   ln -is $dotfiles_dir/tmux.conf ~/.tmux.conf
 fi
 
-echo -n "Static Link ~/.emacs -> $dotfiles_dir/emacs ? (y/n) >"
-read input
-if [ $input = 'y' ] || [ $input = 'Y' ]; then
-  echo ln -is $dotfiles_dir/emacs ~/.emacs
-  ln -is $dotfiles_dir/emacs ~/.emacs
-fi
-
 cp -rp $dotfiles_dir/ssh ~/.ssh
 
 scripts/install-git
