@@ -19,6 +19,8 @@ Plugin 'slim-template/vim-slim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'posva/vim-vue'
+Plugin 'digitaltoad/vim-pug'
 
 " == End Vundle ==================================================================
 
@@ -34,6 +36,8 @@ set syntax=htmldjango
 
 autocmd BufNewFile,BufRead *.less set filetype=css
 autocmd BufReadPost,BufNewFile Gemfile,*.jbuilder,*.ruby set syntax=ruby
+" autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 set mouse=a
 set autoindent
