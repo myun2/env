@@ -1,6 +1,6 @@
 alias ebe="vi ~/.bash_profile"
 alias sou="source ~/.bash_profile"
-alias hist="history 50"
+alias hist="history"
 
 alias _diff="/usr/bin/diff"
 alias ddiff="/usr/bin/diff"
