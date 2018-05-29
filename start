@@ -1,6 +1,6 @@
 sudo yum -y install git
 sudo aptitude -y install git
 
-git clone https://github.com/myun2/env.git ~/.myun2-env
-cd ~/.myun2-env
+git clone https://github.com/myun2/my_env.git
+cd ~/my_env
 ./install.sh
