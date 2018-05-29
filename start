@@ -3,4 +3,4 @@ sudo aptitude -y install git
 
 git clone https://github.com/myun2/my_env.git
 cd ~/my_env
-./install.sh
+./install.sh -y
