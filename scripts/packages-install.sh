@@ -5,3 +5,4 @@ sudo yum -y install openssl-devel gem lv ruby-devel libxml2-devel libxslt-devel
 sudo yum -y install libyaml-devel readline-devel libffi-devel sqlite-devel
 sudo yum -y install perl-ExtUtils-MakeMaker
 sudo yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+sudo yum -y install postgresql postgresql-devel

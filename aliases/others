@@ -1,6 +1,6 @@
 alias ebe="vi ~/.bash_profile"
 alias sou="source ~/.bash_profile"
-alias hist="history 50"
+alias hist="history"
 
 alias _diff="/usr/bin/diff"
 alias ddiff="/usr/bin/diff"
@@ -20,4 +20,7 @@ function findgrep2 {
 }
 alias figrep="findgrep"
 alias fgrep="findgrep"
-alias last="ls | tail -n 1"
+alias last="ls  | tail -n 1"
+alias first="ls | head -n 1"
+
+HISTSIZE=50000

@@ -6,22 +6,24 @@ filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'gmarik/Vundle.vim'
+
+" Ruby / Rails
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-haml'
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
+" Others, JS
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'posva/vim-vue'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'ianks/vim-tsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'altercation/vim-colors-solarized'
-
 call vundle#end()
 filetype plugin indent on
 
@@ -38,6 +40,8 @@ set syntax=htmldjango
 
 autocmd BufNewFile,BufRead *.less set filetype=css
 autocmd BufReadPost,BufNewFile Gemfile,*.jbuilder,*.ruby set syntax=ruby
+" autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 set mouse=a
 set autoindent
@@ -67,6 +71,7 @@ autocmd User Bundler
       \ if &makeprg !~# 'bundle' | setl makeprg^=bundle\ exec\  | endif
 
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
+autocmd BufReadPost,BufNewFile *.dia set syntax=ruby
 autocmd BufReadPost,BufNewFile *.scala set syntax=scala
 autocmd BufReadPost,BufNewFile *.slim set syntax=slim
 autocmd BufRead,BufNewFile *.slim setfiletype slim

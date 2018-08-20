@@ -4,8 +4,8 @@
 [core]
     #pager = lv -c -Os
     pager = less -F -X
-    editor = vim -n -c 'syntax on'
-    excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
+  editor = vim
 
 [alias]
     wtf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
