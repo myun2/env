@@ -4,14 +4,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" Ruby, Rails, Rspec
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-haml'
 Plugin 'Keithbsmiley/rspec.vim'
@@ -19,12 +15,20 @@ Plugin 'slim-template/vim-slim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'ianks/vim-tsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'altercation/vim-colors-solarized'
 
-" == End Vundle ==================================================================
+call vundle#end()
+filetype plugin indent on
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Solarized
+syntax enable
+set background=dark
+colorscheme solarized
 
 set encoding=utf-8
 set number
@@ -65,11 +69,12 @@ autocmd User Bundler
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufReadPost,BufNewFile *.scala set syntax=scala
 autocmd BufReadPost,BufNewFile *.slim set syntax=slim
+autocmd BufRead,BufNewFile *.slim setfiletype slim
 
 " Coffee
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
-autocmd BufWritePost *.coffee silent make!
+" autocmd BufWritePost *.coffee silent make!
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
 
