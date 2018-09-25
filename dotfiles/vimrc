@@ -13,8 +13,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-haml'
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
-" Others, JS
-Plugin 'derekwyatt/vim-scala'
+" Javascript
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
@@ -23,7 +22,10 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'ianks/vim-tsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+" Etc
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin indent on
 
