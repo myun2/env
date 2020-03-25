@@ -22,5 +22,8 @@ alias figrep="findgrep"
 alias fgrep="findgrep"
 alias last="ls  | tail -n 1"
 alias first="ls | head -n 1"
+function repl() {
+  find * -type f | xargs sed -i "s/$1/$2/g"
+}
 
 HISTSIZE=50000
